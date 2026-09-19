@@ -1,0 +1,27 @@
+.contacts-panel {
+  overflow: hidden;
+  border: 1px solid #dfe3ee;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(31, 42, 68, .07);
+}
+.panel-heading { padding: 1.35rem; border-bottom: 1px solid #e7eaf1; }
+.panel-heading p { margin: 0; color: #5261d7; font-size: .7rem; font-weight: 800; letter-spacing: .12em; }
+h2 { margin: .25rem 0 0; }
+ul { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+li { padding: 1.25rem 1.35rem; border-bottom: 1px solid #e7eaf1; }
+li:last-child { border-bottom: 0; }
+.contact-heading { display: flex; gap: .65rem; align-items: center; }
+h3 { margin: 0; }
+.badge { padding: .2rem .5rem; border-radius: 999px; color: #8a4b08; background: #fff4d8; font-size: .72rem; font-weight: 800; }
+dl { display: grid; gap: .45rem; margin: .9rem 0; color: #475467; }
+dl div { display: grid; grid-template-columns: 70px 1fr; gap: .75rem; }
+dt { font-size: .78rem; font-weight: 800; text-transform: uppercase; }
+dd { margin: 0; overflow-wrap: anywhere; }
+a { color: #3949bd; }
+.actions { display: flex; gap: .55rem; }
+button { padding: .55rem .8rem; border: 0; border-radius: .55rem; font-weight: 800; }
+.edit { color: #344054; background: #eef1f7; }
+.delete { color: #b42338; background: #fff0f2; }
+.empty { margin: 0; padding: 2rem 1.35rem; color: #667085; }
+

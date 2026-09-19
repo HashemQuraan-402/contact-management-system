@@ -1,0 +1,40 @@
+<section class="contacts-panel" aria-labelledby="saved-contacts-heading">
+  <div class="panel-heading">
+    <div>
+      <p>SAVED CONTACTS</p>
+      <h2 id="saved-contacts-heading">Your people</h2>
+    </div>
+  </div>
+
+  @if (contactsList$ | async; as contacts) {
+    @if (contacts.length > 0) {
+      <ul>
+        @for (contact of contacts; track contact.id) {
+          <li>
+            <div class="contact-heading">
+              <h3>{{ contact.name }}</h3>
+              @if (contact.favorite) {
+                <span class="badge">Favorite</span>
+              }
+            </div>
+
+            <dl>
+              <div><dt>Email</dt><dd>{{ contact.email || 'Not provided' }}</dd></div>
+              <div><dt>Phone</dt><dd><a [href]="'tel:' + contact.phone">{{ contact.phone }}</a></dd></div>
+            </dl>
+
+            <div class="actions">
+              <button type="button" class="edit" (click)="editContact.emit(contact)">Edit</button>
+              <button type="button" class="delete" (click)="deleteContact.emit(contact)">Delete</button>
+            </div>
+          </li>
+        }
+      </ul>
+    } @else {
+      <p class="empty">No contacts yet. Use the form to add your first one.</p>
+    }
+  } @else {
+    <p class="empty">Loading contacts…</p>
+  }
+</section>
+

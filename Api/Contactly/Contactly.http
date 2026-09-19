@@ -1,0 +1,18 @@
+@Contactly_HostAddress = http://localhost:5148
+
+### List contacts
+GET {{Contactly_HostAddress}}/api/contacts
+Accept: application/json
+
+### Create a contact
+POST {{Contactly_HostAddress}}/api/contacts
+Content-Type: application/json
+
+{
+  "name": "Jordan Lee",
+  "email": "jordan@example.com",
+  "phone": "+1 555 0100",
+  "favorite": true
+}
+
+###

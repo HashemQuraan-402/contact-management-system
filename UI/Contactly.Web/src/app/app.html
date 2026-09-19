@@ -1,0 +1,29 @@
+<main class="page-shell">
+  <header class="page-header">
+    <p class="eyebrow">FULL-STACK CONTACT MANAGER</p>
+    <h1>Contacts</h1>
+    <p>Keep important people, phone numbers, and email addresses in one clear workspace.</p>
+  </header>
+
+  @if (statusMessage) {
+    <p class="message success" role="status">{{ statusMessage }}</p>
+  }
+  @if (errorMessage) {
+    <p class="message error" role="alert">{{ errorMessage }}</p>
+  }
+
+  <section class="workspace">
+    <app-contacts-form
+      [contact]="selectedContact"
+      (saveContact)="onSaveContact($event)"
+      (cancelEdit)="onCancelEdit()"
+    />
+
+    <app-contacts-information
+      [contactsList$]="contacts$"
+      (editContact)="onEditContact($event)"
+      (deleteContact)="onDeleteContact($event)"
+    />
+  </section>
+</main>
+
