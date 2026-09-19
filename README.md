@@ -31,7 +31,7 @@ Prerequisites: .NET 10 SDK, SQL Server, Node.js, and npm.
    ```powershell
    cd Api\Contactly
    dotnet restore
-   dotnet tool install --global dotnet-ef --version 10.*
+   dotnet tool restore
    dotnet ef database update
    dotnet run --launch-profile https
    ```
