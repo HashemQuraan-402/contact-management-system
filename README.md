@@ -11,6 +11,16 @@ A compact CRUD application for storing contacts, editing their details, marking 
 - SQL Server persistence through Entity Framework Core
 - Environment-specific API URLs and a restricted CORS policy
 
+## Screenshots
+
+### Contact directory
+
+![Contact directory with favorite contacts](docs/screenshots/contact-directory.png)
+
+### Edit contact
+
+![Edit contact form with existing details](docs/screenshots/edit-contact.png)
+
 ## Technology
 
 - ASP.NET Core 10 Web API
