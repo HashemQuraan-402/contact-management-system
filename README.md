@@ -58,6 +58,12 @@ Prerequisites: .NET 10 SDK, SQL Server, Node.js, and npm.
 
 3. Open `http://localhost:4200`. The development client calls `https://localhost:7178/api`.
 
+## Security scope
+
+This repository is intentionally scoped as a local, single-user CRUD demo. It does not implement authentication or user isolation, so the API should not be exposed directly to the public internet.
+
+A production deployment must add authentication and authorization, keep HTTPS enabled, restrict CORS origins, and store environment-specific database configuration outside source control.
+
 ## API endpoints
 
 | Method | Endpoint | Purpose |
